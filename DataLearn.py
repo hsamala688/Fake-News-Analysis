@@ -1,4 +1,3 @@
-HEAD
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -60,7 +59,6 @@ for col in rn_text_columns:
     )
 
 for col in rn_text_columns:
-for col in fn_text_columns:
     real_news_df[col] = (
         real_news_df[col]
         .apply(word_tokenize)
