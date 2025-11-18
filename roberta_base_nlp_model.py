@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import re
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -19,6 +20,17 @@ real_news_df = pd.read_csv('True.csv')
 
 fake_news_df['label'] = 0
 real_news_df['label'] = 1
+
+#Basically this is the whole patch to clean the 'Reuters' tag from the real news dataset. Help model Traning
+pattern_to_remove = r'^[A-Z/,\s]+\s*\(REUTERS\)\s*-\s*'
+real_news_df['text_clean'] = real_news_df['text'].astype(str).str.replace(
+    pattern_to_remove, 
+    '', 
+    regex=True, 
+    flags=re.IGNORECASE
+)
+real_news_df.drop('text', axis=1, inplace=True)
+real_news_df.rename(columns={'text_clean': 'text'}, inplace=True)
 
 #Columns in each dataset ['title', 'text', 'subject', 'date']
 
@@ -69,14 +81,13 @@ for col in rn_text_columns:
         .apply(lambda x: ' '.join(x))
     )
 
-real_news_df = real_news_df[real_news_df['text'].str.len() > 0]
-
-#print(real_news_df.head())
-#print(fake_news_df.head())
+real_news_df.to_csv("True_Cleaned.csv", index=False)
+print(fake_news_df['subject'].value_counts())
+print(real_news_df['subject'].value_counts())
 
 #Step 2: Finding Patterns in Words of the Fake News Dataset
 
-from sklearn.utils import class_weight
+'''from sklearn.utils import class_weight
 from transformers import Trainer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
@@ -127,6 +138,8 @@ training_args = TrainingArguments(
 )
 
 df = pd.concat([fake_news_df, real_news_df], ignore_index=True)
+
+
 
 df_train_val, df_test = train_test_split(
     df, 
@@ -196,7 +209,7 @@ for key, value in evaluation_results.items():
     print(f"{key}: {value:.4f}")
 
 #Intial Training Results:
-'''
+
 eval_loss: 0.0125
 eval_accuracy: 0.9986
 eval_f1_score: 0.9986
