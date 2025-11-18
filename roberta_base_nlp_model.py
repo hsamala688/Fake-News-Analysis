@@ -194,3 +194,16 @@ evaluation_results = trainer.evaluate(eval_dataset=val_dataset)
 
 for key, value in evaluation_results.items():
     print(f"{key}: {value:.4f}")
+
+#Intial Training Results:
+'''
+eval_loss: 0.0125
+eval_accuracy: 0.9986
+eval_f1_score: 0.9986
+eval_precision: 0.9986
+eval_recall: 0.9986
+eval_runtime: 97.5257
+eval_samples_per_second: 45.3930
+eval_steps_per_second: 5.6810
+epoch: 3.0000
+'''
