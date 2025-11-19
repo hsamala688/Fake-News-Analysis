@@ -1,5 +1,4 @@
 # Fake-New-Analysis-NLP-Model
-
 This is a collaborative project built by two UCLA students Kavin Ramesh (Statistics & Data Science ) & Hayden Samala (Mathematics of Computation) to classify online news articles as real of fake using modern NLP and machine-learning techniques.
 
 This project aims to build an NLP model capable of analyzing a news article and correctly prediciting if an article is fake news or has legitimate information.
@@ -22,6 +21,20 @@ These results were incredibly concerning because it indicated that the model was
 
 This was then the results of our second NLP model testing:
 
+# Basic Visualizations
+We created a series of visualizations to track correlation in word count, subjectivity, polarity, punctuation density, and average word length between the fake news articles and real news articles. Additionally, we created feature importance plot to pick which features were most important in detecting what is real or fake news. Furthermore, we created basic word clouds and a density graph comparing word density between the real and fake articles.
+
+Heatmap Correlation:
+![Heatmap Correlation]("https://github.com/hsamala688/Fake-News-Analysis/blob/main/Visualizations_png/correlation_heatmap.png")
+
+Feature Importance Plot:
+![Feature Importance Plot]("https://github.com/hsamala688/Fake-News-Analysis/blob/main/Visualizations_png/feature_importance.png")
+
+Word Count Density:
+![Word Count Density]("https://github.com/hsamala688/Fake-News-Analysis/blob/main/Visualizations_png/word_count_distribution.png")
+
+Word Clouds of Fake & Real News
+![Word Clouds]("https://github.com/hsamala688/Fake-News-Analysis/blob/main/Visualizations_png/wordclouds_fake_vs_real.png")
 # Features:
 - News Article Classification
 - Text Preprocessing Pipeline
