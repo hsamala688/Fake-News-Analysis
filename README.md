@@ -1,5 +1,5 @@
 # Fake-New-Analysis-NLP-Model
-This is a collaborative project built by two UCLA students Kavin Ramesh (Statistics & Data Science ) & Hayden Samala (Mathematics of Computation) to classify online news articles as real of fake using modern NLP and machine-learning techniques.
+This is a collaborative project built by two UCLA students Hayden Samala (Mathematics of Computation) & Kavin Ramesh (Statistics & Data Science) to classify online news articles as real of fake using modern NLP and machine-learning techniques.
 
 This project aims to build an NLP model capable of analyzing a news article and correctly prediciting if an article is fake news or has legitimate information.
 
