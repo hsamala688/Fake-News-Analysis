@@ -13,7 +13,7 @@ Feature Importance Plot:
 <img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/4308b521-9237-414c-82d4-232afc0fba4f" />
 
 Word Count Density:
-<img width="1600" height="800" alt="Image" src="https://github.com/user-attachments/assets/a267ca9a-2d97-4371-9c65-3f1bb0e69fcd" />
+<img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/53353169-7da8-4530-9ebc-0061e335cf84" />
 
 Word Clouds of Fake & Real News
 <img width="1600" height="800" alt="Image" src="https://github.com/user-attachments/assets/a267ca9a-2d97-4371-9c65-3f1bb0e69fcd" />
