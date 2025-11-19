@@ -1,4 +1,4 @@
-# Fake-New-Analysis-AI-Agent
+# Fake-New-Analysis-NLP-Model
 
 This is a collaborative project built by two UCLA students Kavin Ramesh (Statistics & Data Science ) & Hayden Samala (Mathematics of Computation) to classify online news articles as real of fake using modern NLP and machine-learning techniques.
 
