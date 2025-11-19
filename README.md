@@ -10,7 +10,7 @@ Heatmap Correlation:
 <img width="1000" height="800" alt="Image" src="https://github.com/user-attachments/assets/e506e549-c1dc-4fa5-a9a7-f72fa1f3816d" />
 
 Feature Importance Plot:
-<img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/4308b521-9237-414c-82d4-232afc0fba4f" />
+<img width="1000" height="800" alt="Image" src="https://github.com/user-attachments/assets/f66818db-1eb3-4636-b247-3291bfdf2563" />
 
 Word Count Density:
 <img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/53353169-7da8-4530-9ebc-0061e335cf84" />
