@@ -92,6 +92,7 @@ from transformers import Trainer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from transformers import AutoTokenizer, RobertaForSequenceClassification, TrainingArguments, IntervalStrategy
+from transformers import EarlyStoppingCallback
 from datasets import Dataset
 
 model_name = "roberta-base"
@@ -130,10 +131,15 @@ class WeightedLossTrainer(Trainer):
 training_args = TrainingArguments(
     output_dir="./results",
     do_eval=True,
-    learning_rate=2e-5,
+    learning_rate=1e-5,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
-    num_train_epochs=3,
+    evaluation_strategy=IntervalStrategy.EPOCH,
+    eval_steps = 450, #Calculated: Total Dataset Size = 44898*0.81 = 36380/Batch Size: 8 =  4545.9225/10 = ~450
+    num_train_epochs= 10,
+    load_best_model_at_end=True,
+    metric_for_best_model="f1_score", #it balances precision and recall, especially important with your slightly imbalanced dataset
+    greater_is_better=True, #We want the f1_score to be as high as possible
     weight_decay=0.01,
 )
 
