@@ -33,3 +33,4 @@ sns.heatmap(correlation_matrix, annot=True,cmap='coolwarm',fmt=".2f",linewidths=
 plt.title('Correlation Heatmap of Features in Fake and Real News Dataset')
 plt.savefig('correlation_heatmap.png')
 plt.show()
+##This is our heatmap correlation 
