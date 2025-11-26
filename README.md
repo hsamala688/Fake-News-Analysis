@@ -1,5 +1,7 @@
 # Fake News vs Real News
-This is a collaborative project built by two UCLA students Hayden Samala (Mathematics of Computation) & Kavin Ramesh (Statistics & Data Science) to classify online news articles as real of fake using modern NLP and machine-learning techniques.
+This is a collaborative project built by two UCLA students Hayden Samala (Mathematics of Computation) & Kavin Ramesh (Statistics & Data Science). 
+
+We developed several basic data visualizations, logistic regression charts, and a full fledged Natural Language Processing Model all from a kaggle dataset to help classify real vs fake news.
 
 This project aims to build an NLP model capable of analyzing a news article and correctly prediciting if an article is fake news or has legitimate information.
 
