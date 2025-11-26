@@ -32,17 +32,17 @@ When we eventually ran our first NLP model we received the following results:
 - eval_steps_per_second: 5.6810
 - epoch: 3.0000
 
-These results were incredibly concerning because it indicated that the model was almost too accurate. This then indicated that there were several issues within our datasets. After performing verification tests we saw that every single row within the True.csv had the associated "REUTERS" tag to it, adding to the inflated accuracy measurements. Additionally, there were subject differences between the Fake.csv and True.csv with them both classifying articles differently. This then lead to us dropping the subject column for our NLP model training.
+These results were incredibly concerning because it indicated that the model was almost too accurate. This then indicated that there were several issues within our datasets. After performing verification tests we saw that every single row within the True.csv had the associated "REUTERS" tag to it, adding to the inflated accuracy measurements. Additionally, there were subject differences between the Fake.csv and True.csv with them both classifying articles differently. This then lead to us dropping the subject column for our NLP model training. 
+As such we then made several modifications to our codebase to account for this:
+- At the start of the codebase we added a function to remove all the tags of <REUTERS> from our code and then created a brand new column to store all that new text information and deleted the old one
+- To optimize the training we changed several of our key metrics such as changing our eval_steps
 
 This was then the results of our second NLP model testing:
 
 
 
 ## Key Findings & Realizations:
-Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we learned that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news. Additionally, we learned that there was an issue in a our training dataset that allowed for the inflated accuracy scores as each of the text strings in the real dataset contained the tag <REUTERS> interfering with the training.
-As such we then made several modifications to our codebase to account for this:
-- At the start of the codebase we added a function to remove all the tags of <REUTERS> from our code and then created a brand new column to store all that new text information and deleted the old one
-- To optimize the training we changed several of our key metrics such as changing our eval_steps
+Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we learned that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news. We also learned to look to better clean our data before creation of any models or analysis as it could interfere with our results.
 
 # Features:
 - News Article Classification
