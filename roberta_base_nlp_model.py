@@ -323,16 +323,15 @@ epoch: 3.0000
 '''
 
 #Second round of Training
-'''
-eval_loss:
-eval_accuracy:
-eval_f1_score:
-eval_precision:
-eval_recall:
-eval_runtime:
-eval_samples_per_second:
-eval_steps_per_second:
-epoch:
-'''
+#Second round of Training
+#eval_loss: 0.0259
+#eval_accuracy: 0.9964
+#eval_f1_score: 0.9963
+#eval_precision: 0.9958
+#eval_recall: 0.9967
+#eval_runtime: 92.2295
+#eval_samples_per_second: 48.0000
+#eval_steps_per_second: 6.0070
+#epoch: 3.0000
 
 #Codebase built by Hayden and Kavin, Comments and documentation done by Hayden
