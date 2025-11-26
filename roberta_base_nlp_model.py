@@ -192,7 +192,7 @@ training_args = TrainingArguments(
     per_device_eval_batch_size=8,
     evaluation_strategy=IntervalStrategy.EPOCH,
     eval_steps = 450, #Calculated: Total Dataset Size = 44898*0.81 = 36380/Batch Size: 8 =  4545.9225/10 = ~450
-    num_train_epochs= 10,
+    num_train_epochs= 3,
     load_best_model_at_end=True,
     metric_for_best_model="f1_score", #it balances precision and recall, especially important with your slightly imbalanced dataset
     greater_is_better=True, #We want the f1_score to be as high as possible
@@ -294,10 +294,10 @@ trainer = WeightedLossTrainer(
 
 trainer.train()
 
-'''
-intializes our trainer to finally be run
-loads the pre-trained roberta to train our data
-'''
+
+#intializes our trainer to finally be run
+#loads the pre-trained roberta to train our data
+
 
 print("Evaluating the Model")
 evaluation_results = trainer.evaluate(eval_dataset=val_dataset)
@@ -305,24 +305,22 @@ evaluation_results = trainer.evaluate(eval_dataset=val_dataset)
 for key, value in evaluation_results.items():
     print(f"{key}: {value:.4f}")
 
-'''
-our evaluation metrics get printed at the end
-'''
+
+#our evaluation metrics get printed at the end
+
 
 #Intial Training Results:
-'''
-eval_loss: 0.0125
-eval_accuracy: 0.9986
-eval_f1_score: 0.9986
-eval_precision: 0.9986
-eval_recall: 0.9986
-eval_runtime: 97.5257
-eval_samples_per_second: 45.3930
-eval_steps_per_second: 5.6810
-epoch: 3.0000
-'''
 
-#Second round of Training
+#eval_loss: 0.0125
+#eval_accuracy: 0.9986
+#eval_f1_score: 0.9986
+#eval_precision: 0.9986
+#eval_recall: 0.9986
+#eval_runtime: 97.5257
+#eval_samples_per_second: 45.3930
+#eval_steps_per_second: 5.6810
+#epoch: 3.0000
+
 #Second round of Training
 #eval_loss: 0.0259
 #eval_accuracy: 0.9964
@@ -333,5 +331,17 @@ epoch: 3.0000
 #eval_samples_per_second: 48.0000
 #eval_steps_per_second: 6.0070
 #epoch: 3.0000
+
+#Third round of Training
+#Using Google Colab and setting Epoch to 3
+#eval_loss: 
+#eval_accuracy: 
+#eval_f1_score: 
+#eval_precision: 
+#eval_recall: 
+#eval_runtime: 
+#eval_samples_per_second: 
+#eval_steps_per_second: 
+#epoch: 
 
 #Codebase built by Hayden and Kavin, Comments and documentation done by Hayden
