@@ -44,6 +44,10 @@ This was then the results of our second NLP model testing:
 ## Key Findings & Realizations:
 Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we learned that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news. We also learned to look to better clean our data before creation of any models or analysis as it could interfere with our results.
 
+## Dataset
+This is the dataset we used to build out all which we have done:
+https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
+
 # Features:
 - News Article Classification
 - Text Preprocessing Pipeline
