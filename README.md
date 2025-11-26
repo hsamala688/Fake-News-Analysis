@@ -57,6 +57,8 @@ This was then the results of our second NLP model testing:
 - eval_steps_per_second: 6.0070
 - epoch: 3.0000
 
+After performing data cleaning and backtesting, we still produced a model of incredibly high accuracy. This indicates that even though there were issues with Reuters tag and with our training arguments due to Roberta-bases incredible fitting towards this type of work it was highly successful in predicting fake news vs real news.
+
 ## Key Findings & Realizations:
 Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we learned that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news. We also learned to look to better clean our data before creation of any models or analysis as it could interfere with our results.
 
