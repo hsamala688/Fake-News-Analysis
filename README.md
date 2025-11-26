@@ -39,7 +39,10 @@ This was then the results of our second NLP model testing:
 
 
 ## Key Findings & Realizations:
-Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we leanred that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news.
+Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we learned that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news. Additionally, we learned that there was an issue in a our training dataset that allowed for the inflated accuracy scores as each of the text strings in the real dataset contained the tag <REUTERS> interfering with the training.
+As such we then made several modifications to our codebase to account for this:
+- At the start of the codebase we added a function to remove all the tags of <REUTERS> from our code and then created a brand new column to store all that new text information and deleted the old one
+- To optimize the training we changed several of our key metrics such as changing our eval_steps
 
 # Features:
 - News Article Classification
