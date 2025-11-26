@@ -69,4 +69,5 @@ https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
 
 ## Key Notes:
 Kavin had issues pushing code to github so almost all pushes were done by Hayden. However, work was still down equally between the two of us.
+Additionally, all code blocks should have extensive comments explaining our reasoning
 
