@@ -10,7 +10,6 @@ fake_news_df['label'] = 0
 real_news_df['label'] = 1
 
 #First analysis: 
-
 df = pd.concat([fake_news_df, real_news_df], ignore_index=True)
 stratify = df['label']
 
