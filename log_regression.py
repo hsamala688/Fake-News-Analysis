@@ -51,9 +51,11 @@ y_pred_proba = lr_model.predict_proba(X_test_tfidf)[:, 1]  # Probability of clas
 
 accuracy = accuracy_score(y_test, y_pred)
 
+'''
 print("Accuracy:", accuracy)
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred, target_names=['Fake', 'Real']))
+'''
 
 # Confusion Matrix
 plt.figure(figsize=(8, 6))
@@ -95,4 +97,4 @@ plt.ylabel("Count")
 plt.savefig("Prediction_Distribution.png")
 plt.show()
 
-#Linear Regression done by Kavin Ramesh, Issue with pushing to GitHub
+#Logistic Regression done by Kavin Ramesh, Issue with pushing to GitHub
