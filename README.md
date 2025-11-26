@@ -47,8 +47,15 @@ As such we then made several modifications to our codebase to account for this:
 - To optimize the training we changed several of our key metrics such as changing our eval_steps
 
 This was then the results of our second NLP model testing:
-
-
+- eval_loss: 0.0259
+- eval_accuracy: 0.9964
+- eval_f1_score: 0.9963
+- eval_precision: 0.9958
+- eval_recall: 0.9967
+- eval_runtime: 92.2295
+- eval_samples_per_second: 48.0000
+- eval_steps_per_second: 6.0070
+- epoch: 3.0000
 
 ## Key Findings & Realizations:
 Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we learned that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news. We also learned to look to better clean our data before creation of any models or analysis as it could interfere with our results.
