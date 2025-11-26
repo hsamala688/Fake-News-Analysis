@@ -335,14 +335,14 @@ for key, value in evaluation_results.items():
 
 #Third round of Training
 #Using Google Colab and setting Epoch to 3
-#eval_loss: 
-#eval_accuracy: 
-#eval_f1_score: 
-#eval_precision: 
-#eval_recall: 
-#eval_runtime: 
-#eval_samples_per_second: 
-#eval_steps_per_second: 
-#epoch: 
+#eval_loss: 0.0293
+#eval_accuracy: 0.9964
+#eval_f1_score: 0.9963
+#eval_precision: 0.9963
+#eval_recall: 0.9963
+#eval_runtime: 30.5524
+#eval_samples_per_second: 144.8990
+#eval_steps_per_second: 18.1330
+#epoch: 3.0000
 
 #Codebase built by Hayden and Kavin, Comments and documentation done by Hayden
