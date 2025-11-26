@@ -7,7 +7,7 @@ This project aims to build an NLP model capable of analyzing a news article and 
 We created a series of visualizations to track correlation in word count, subjectivity, polarity, punctuation density, and average word length between the fake news articles and real news articles. Additionally, we created feature importance plot to pick which features were most important in detecting what is real or fake news. Furthermore, we created basic word clouds and a density graph comparing word density between the real and fake articles.
 
 ## Heatmap Correlation:
-<img width="1000" height="800" alt="Image" src="https://github.com/user-attachments/assets/e506e549-c1dc-4fa5-a9a7-f72fa1f3816d" />
+<img width="1000" height="800" alt="Image" src="https://github.com/user-attachments/assets/8912bb4d-19da-4f2e-91dc-cbea5f465f70" />
 
 ## Feature Importance Plot:
 <img width="1000" height="800" alt="Image" src="https://github.com/user-attachments/assets/f66818db-1eb3-4636-b247-3291bfdf2563" />
@@ -17,6 +17,16 @@ We created a series of visualizations to track correlation in word count, subjec
 
 ## Word Clouds of Fake & Real News
 <img width="1600" height="800" alt="Image" src="https://github.com/user-attachments/assets/a267ca9a-2d97-4371-9c65-3f1bb0e69fcd" />
+
+# Linear Regression Analysis:
+## Distribution of Predicted Values
+<img width="800" height="500" alt="Image" src="https://github.com/user-attachments/assets/a9373b8b-5277-492e-8bed-25098801329f" />
+
+## Actual vs Predicted Score Plot
+<img width="800" height="500" alt="Image" src="https://github.com/user-attachments/assets/cabe0b00-206e-416f-a329-0d639dc7924a" />
+
+## Residuals Plot
+<img width="800" height="500" alt="Image" src="https://github.com/user-attachments/assets/20845838-bf57-48dd-bc2c-509e0b41e0da" />
 
 # Natural Language Model Building Process:
 We intially worked by building out using a pretrained roberta-base model which then used and existing kaggle dataset containing real news and fake news from the period of 2015 to 2017. 
