@@ -74,18 +74,18 @@ As such we then made several modifications to our codebase to account for this:
 - eval_steps_per_second: 6.0070
 - epoch: 10.0000
 
-Third Round of NLP Model Testing Results:
+### Third Round of NLP Model Testing Results:
 Using Google Colab and setting Epoch to 3
 
-eval_loss: 0.0293
-eval_accuracy: 0.9964
-eval_f1_score: 0.9963
-eval_precision: 0.9963
-eval_recall: 0.9963
-eval_runtime: 30.5524
-eval_samples_per_second: 144.8990
-eval_steps_per_second: 18.1330
-epoch: 3.0000
+- eval_loss: 0.0293
+- eval_accuracy: 0.9964
+- eval_f1_score: 0.9963
+- eval_precision: 0.9963
+- eval_recall: 0.9963
+- eval_runtime: 30.5524
+- eval_samples_per_second: 144.8990
+- eval_steps_per_second: 18.1330
+- epoch: 3.0000
 After running it a third time, it simply has proven that using roberta-base was an excellent choice. Providing highly accurate results even after decreasing the amount of iterations via epoch.
 
 ## Key Findings & Realizations:
