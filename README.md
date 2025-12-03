@@ -86,6 +86,7 @@ Using Google Colab and setting Epoch to 3
 - eval_samples_per_second: 144.8990
 - eval_steps_per_second: 18.1330
 - epoch: 3.0000
+
 After running it a third time, it simply has proven that using roberta-base was an excellent choice. Providing highly accurate results even after decreasing the amount of iterations via epoch.
 
 ## Key Findings & Realizations:
