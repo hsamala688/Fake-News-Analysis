@@ -47,7 +47,7 @@ We intially worked by building out using a pretrained roberta-base model which t
 
 ## Results:
 
-When we eventually ran our first NLP model we received the following results:
+### First Round of NLP Model Testing Results
 - eval_loss: 0.0125
 - eval_accuracy: 0.9986
 - eval_f1_score: 0.9986
@@ -56,14 +56,14 @@ When we eventually ran our first NLP model we received the following results:
 - eval_runtime: 97.5257
 - eval_samples_per_second: 45.3930
 - eval_steps_per_second: 5.6810
-- epoch: 3.0000
+- epoch: 10.0000
 
 These results were incredibly concerning because it indicated that the model was almost too accurate. This then indicated that there were several issues within our datasets. After performing verification tests we saw that every single row within the True.csv had the associated "REUTERS" tag to it, adding to the inflated accuracy measurements. Additionally, there were subject differences between the Fake.csv and True.csv with them both classifying articles differently. This then lead to us dropping the subject column for our NLP model training. 
 As such we then made several modifications to our codebase to account for this:
 - At the start of the codebase we added a function to remove all the tags of <REUTERS> from our code and then created a brand new column to store all that new text information and deleted the old one
 - To optimize the training we changed several of our key metrics such as changing our eval_steps
 
-This was then the results of our second NLP model testing:
+### Second Round of NLP Model Testing Results:
 - eval_loss: 0.0259
 - eval_accuracy: 0.9964
 - eval_f1_score: 0.9963
@@ -72,9 +72,21 @@ This was then the results of our second NLP model testing:
 - eval_runtime: 92.2295
 - eval_samples_per_second: 48.0000
 - eval_steps_per_second: 6.0070
-- epoch: 3.0000
+- epoch: 10.0000
 
-After performing data cleaning and backtesting, we still produced a model of incredibly high accuracy. This indicates that even though there were issues with Reuters tag and with our training arguments due to Roberta-bases incredible fitting towards this type of work it was highly successful in predicting fake news vs real news.
+Third Round of NLP Model Testing Results:
+Using Google Colab and setting Epoch to 3
+
+eval_loss: 0.0293
+eval_accuracy: 0.9964
+eval_f1_score: 0.9963
+eval_precision: 0.9963
+eval_recall: 0.9963
+eval_runtime: 30.5524
+eval_samples_per_second: 144.8990
+eval_steps_per_second: 18.1330
+epoch: 3.0000
+After running it a third time, it simply has proven that using roberta-base was an excellent choice. Providing highly accurate results even after decreasing the amount of iterations via epoch.
 
 ## Key Findings & Realizations:
 Roberta-base model is a obviously a pretrained model which has been trained on millions of lines of sentences to build general speech recongnition. However, without optimizing it for our needs we essentially overfitting our data with the model. As such we learned that we ashould be trained on a downstream task to better handle and be able to perform what we want it to do, which is to predict real vs fake news. We also learned to look to better clean our data before creation of any models or analysis as it could interfere with our results.
