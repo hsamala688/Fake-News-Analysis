@@ -161,6 +161,6 @@ Fake-News-Analysis/
 | Name | Major | GitHub |
 |---|---|---|
 | Hayden Samala | Mathematics of Computation, UCLA | [@hsamala688](https://github.com/hsamala688) |
-| Kavin Ramesh | Statistics & Data Science, UCLA | — |
+| Kavin Ramesh | Statistics & Data Science, UCLA | [@kavinramesh](https://github.com/Kavin-Ramesh)|
  
 > All commits were pushed by Hayden due to a GitHub access issue on Kavin's end. Work was split equally between both contributors.
