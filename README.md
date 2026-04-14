@@ -53,19 +53,19 @@ We engineered and analyzed five stylometric features across both corpora to surf
  
 **Heatmap Correlation**
  
-![Heatmap](Visualizations_png/heatmap.png)
+![Heatmap](Visualizations_png/correlation_heatmap.png)
  
 **Feature Importance**
  
 ![Feature Importance](Visualizations_png/feature_importance.png)
  
-**Word Count Density**
+**Word Count Distribution**
  
-![Word Count Density](Visualizations_png/word_count_density.png)
+![Word Count Distribution](Visualizations_png/word_count_distribution.png)
  
 **Word Clouds — Fake vs Real**
  
-![Word Clouds](Visualizations_png/word_clouds.png)
+![Word Clouds](Visualizations_png/wordclouds_fake_vs_real.png)
  
 ---
  
@@ -75,19 +75,19 @@ A logistic regression classifier trained on the engineered feature set, evaluate
  
 **Confusion Matrix**
  
-![Confusion Matrix](Visualizations_png/confusion_matrix.png)
+![Confusion Matrix](Visualizations_png/Confusion_Matrix.png)
  
 **Prediction Probability Distribution**
  
-![Prob Distribution](Visualizations_png/prob_distribution.png)
+![Prob Distribution](Visualizations_png/Distribution_of_Prediction_Probabilities.png)
  
 **Probabilities by Label**
  
-![Probs by Label](Visualizations_png/probs_by_label.png)
+![Probs by Label](Visualizations_png/Probabilities_by_Label.png)
  
 **Prediction Distribution**
  
-![Prediction Distribution](Visualizations_png/prediction_distribution.png)
+![Prediction Distribution](Visualizations_png/Prediction_Distribution.png)
  
 ---
  
@@ -131,6 +131,10 @@ We fine-tuned `roberta-base` for binary sequence classification. Training ran fo
 | Epoch | 3 |
  
 Performance held steady at 3 epochs, confirming that RoBERTa converges quickly on this task.
+ 
+**Model Performance Comparison**
+ 
+![Model Performance Comparison](Visualizations_png/Model%20Performance%20Comparison.png)
  
 ---
  
