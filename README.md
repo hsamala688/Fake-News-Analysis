@@ -1,6 +1,6 @@
 # Fake News Detection — NLP & Logistic Regression
  
-A collaborative data science project by **Hayden Samala** (Mathematics of Computation, UCLA) and **Kavin Ramesh** (Statistics & Data Science, UCLA).
+A collaborative data science project by **Hayden Samala** (Mathematics and Computer Science, UCLA) and **Kavin Ramesh** (Statistics & Data Science, UCLA).
  
 We trained a fine-tuned **RoBERTa-base** transformer and a **logistic regression** classifier to distinguish real from fake news articles, achieving **99.64% accuracy** on a held-out test set.
  
